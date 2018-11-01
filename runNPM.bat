@@ -1,2 +1,2 @@
-cd C:\Users\User\Documents\_Oframe\site
+cd C:\Users\User\Documents\_Oframe\Osite
 npm start

@@ -6,6 +6,7 @@
     <meta name="description" content="Hello, World! - A-Frame">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="js/link-controls.js"></script>
+    <!-- <script src="node_modules/aframe-no-click-look-controls/dist/aframe-no-click-look-controls.min.js"></script> -->
     <script src="js/camera-position.js"></script>
     
   </head>
@@ -22,13 +23,15 @@
 
         <a-mixin id="material_test" material="shader:standard;roughness:0;color:#000000;metalness:1d;normalMap:#nrm1;sphericalEnvMap:#roller;normalTextureRepeat:.5 .5;"></a-mixin>
       </a-assets>
+
+       <a-entity camera wasd-controls no-click-look-controls="maxyaw:0.8;maxpitch:1" fov="80" position="0 1.8 0" near="0.2" cursor-color="#33CCFF"></a-entity>
       <a-entity lazer-controls></a-entity>
       <a-link href="city.html" position="-3.5 1.5 -1.0" image="#thumbCity" peekMode="true" highlightedColor="#24CAFF"></a-link>
       <!-- <a-box link="href: http://www.google.com; title: google;" position="-1 0.5 -3" rotation="0 5 0" color="blue"></a-box> -->
-      <a-entity geometry="#object" material="src: #homeThumbnail; color: white" position="1 0.75 -3"></a-entity>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+<!--       <a-entity geometry="#object" material="src: #homeThumbnail; color: white" position="1 0.75 -3"></a-entity>
+ -->      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
 
-      <a-entity obj-model="obj: #object" mixin="material_test" position="1 0.75 -3" ></a-entity>
+      <!-- <a-entity obj-model="obj: #object" mixin="material_test" position="1 0.75 -3" ></a-entity> -->
 
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="red"></a-plane>
       <a-sky src="#roller"></a-sky>
